@@ -3,9 +3,9 @@ import Config
 # Configure your database
 config :hello_world, HelloWorld.Repo,
   username: "postgres",
-  password: "postgres",
+  password: "example",
   hostname: "localhost",
-  database: "hello_world_dev",
+  database: System.get_env("DATABASE_URL"),
   stacktrace: true,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
