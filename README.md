@@ -1,18 +1,15 @@
-# HelloWorld
+# Default Phoenix Project with Terraform Deploy for ECS
 
-To start your Phoenix server:
+This project serves as a starting point for a Phoenix application. It includes several key features to help you get started with your development and deployment process:
 
-  * Run `mix setup` to install and setup dependencies
-  * Start Phoenix endpoint with `mix phx.server` or inside IEx with `iex -S mix phx.server`
+- **Terraform Deployment**: Included in the project is a Terraform script for deploying the application to Amazon's Elastic Container Service (ECS). This allows for easy and automated deployment of your application to a scalable and managed container service. The Terraform script is in the `terraform` directory.
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+- **Dockerfile**: A Dockerfile is provided for building a Docker image of the application.
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+- **Docker Compose**: For local development, a Docker Compose file is included. This allows you to easily run your application locally in the same Dockerized environment as it would run in production.
 
-## Learn more
+By using this project as a starting point, you can focus on writing your application code, knowing that the foundations for building, running, and deploying your application are already in place.
 
-  * Official website: https://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Forum: https://elixirforum.com/c/phoenix-forum
-  * Source: https://github.com/phoenixframework/phoenix
+## TODO
+- Improve the `terraform` script split the `main.tf` into multiple files.
+- Improve the VPC configuration, splitting between private and public subnets. Currently the security group enables the traffic only from the public ip of the machine running the terraform script).
